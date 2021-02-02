@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <title>git-test-exersize</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <style> 
+         body {
+            background: #dddddd;
+         }        
+      </style>
+   </head>
+
+   <body>
+
+  <canvas id="myCanvas" width="750" height="500">
+         Canvas not supported
+      </canvas>
+
+       
+<script type="text/javascript">
+	$(document).ready(function() {
+	
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	
+       
+        ctx.font = '24px Helvetica';
+        ctx.fillText('Click anywhere to erase', 175, 40); 
+        
+        ctx.lineWidth = 30;
+
+        ctx.strokeRect(75, 100, 200, 200);
+        ctx.fillRect(325, 100, 200, 200);
+
+        ctx.canvas.onmousedown = function (e) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    });
+       
+       </script>
+       
+   </body>
+</html>
